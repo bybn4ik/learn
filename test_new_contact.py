@@ -17,15 +17,15 @@ def test_new_contact(app):
                                               lastname= "Альбертович", address = "Болотная улица",
                                               homephone = "89589765421", mobile = "89458966525",
                                               email = "bred@yandex.ru",
-                                              bday="9", bmonth="May", byear="1987"))
+                                              bday="", bmonth="", byear="1987"))
     app.logout()
 
 
 def test_new_2_contact(app):
     app.login(password="secret", username="admin")
-    app.created_contact(New_contact_group(firstname ="Хрящин", middlename ="Петро",
+    app.created_2contact(New_contact_group(firstname ="Хрящин", middlename ="Петро",
                                               lastname= "Васильевич", address = "Парнокопытная улица",
                                               homephone = "89589762698", mobile = "89458966684",
                                               email = "хрунов@yandex.ru",
-                                              bday = "9", bmonth = "May", byear = "1993"))
+                                              bday = "", bmonth = "", byear = "1993"))
     app.logout()
